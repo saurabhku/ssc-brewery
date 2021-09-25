@@ -14,10 +14,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-                http
+        http
                 .authorizeRequests(authorize -> {
-                    authorize.antMatchers("/", "/webjars/**", "/login", "/resources/**").permitAll();
-                } )
+                    authorize.antMatchers("/","/webjars/**", "/lognin","/resources/**").permitAll();
+                })
                 .authorizeRequests()
                 .anyRequest().authenticated()
                 .and()
